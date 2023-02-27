@@ -1,10 +1,11 @@
 import MySQLdb
 from functions.utils import writeLogs, getSupAccount, now
 import pandas as pd
+import os
 
 __HOST = "10.0.150.59"
-__USER = "ti"
-__PASS = "Y22@astT*"
+__USER = os.environ['loginTiBanco59']
+__PASS = os.environ['senhaTiBanco59']
 
 def insertIntoDB(insertData):
     db = MySQLdb.connect(host=__HOST, user=__USER, passwd=__PASS, db="db_ti")
